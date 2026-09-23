@@ -184,11 +184,11 @@ def parse_resume(resume_text):
     return resume
 
 # main # ------------------------------------------------------------------------------------------------------------------------------------------------------
-@app.get("/")
+@app.get("/api")
 def home():
     return FileResponse(FRONTEND_DIR / "index.html")
 
-@app.post("/chat")
+@app.post("/api/chat")
 
 def chat(request: ChatReq):
     resume_text = read_pdf(BASE_DIR / "subhanker_resume.pdf")
