@@ -31,7 +31,7 @@ FRONTEND_DIR = BASE_DIR.parent / "frontend"
 app = FastAPI()
 
 app.mount(
-    "/static",
+    "/api/static",
     StaticFiles(directory=FRONTEND_DIR),
     name="static"
 )
